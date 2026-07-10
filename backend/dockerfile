@@ -2,12 +2,10 @@ FROM node:20-slim
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY backend/package*.json ./
 RUN npm install
 
-COPY . .
+COPY backend/ .
 RUN npm run build
 
-# Default to the API server; the worker service overrides this
-# with its own Start Command in Railway's settings.
 CMD ["npm", "run", "start:server"]
