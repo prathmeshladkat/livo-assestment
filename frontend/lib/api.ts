@@ -71,6 +71,11 @@ export async function pollUntilDone(
     const response = await getResult(jobId);
 
     if (response.status === "completed") {
+      if (!response.result) {
+    
+    await new Promise((resolve) => setTimeout(resolve, intervalMs));
+    continue;
+  }
       return response.result;
     }
 
