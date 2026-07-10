@@ -23,6 +23,7 @@ export const uploadAudio = multer({
     "audio/mp3",
     "audio/mp4",
     "audio/m4a",
+    "audio/x-m4a",
     "audio/webm",
     "audio/ogg",
   ];
