@@ -16,7 +16,7 @@ app.use(
     // Open for now during dev/assessment — tighten to the actual Vercel
     // frontend origin once that's deployed, rather than leaving this wildcard
     // in a "production-ready" claim in the architecture doc.
-    origin: "https://livo-assestment.vercel.app/",
+    origin: "https://livo-assestment.vercel.app",
   })
 );
 
